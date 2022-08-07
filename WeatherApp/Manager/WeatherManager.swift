@@ -8,10 +8,10 @@
 import Foundation
 
 struct APIManager {
-    var API = "e04e71ceaf8f07673c20c53098bf942c"
+    static var API = "e04e71ceaf8f07673c20c53098bf942c"
 }
 
 struct Coord {
-    let lat: String = "53,89620"
-    let lon: String = "27,55031"
+    static let lat: String = "53,90020"
+    static let lon: String = "25,31161"
 }
