@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIManager {
-    static var API = "e04e71ceaf8f07673c20c53098bf942c"
+    static var API = "8f486530a37123f81d9fabb681839397"
 }
 
 

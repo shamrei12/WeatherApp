@@ -20,6 +20,7 @@ class SessionManager {
     func weatherRequest(dataResponse: @escaping (WeatherModel) -> Void) {
         LocationManager.shared.getCurrentLocation { (location) in
             let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)&appid=\(APIManager.API)"
+            print(urlString)
             let baseURL = URL(string: urlString)
             //Инициализация сессии
             let sessionConfiguration = URLSessionConfiguration.default

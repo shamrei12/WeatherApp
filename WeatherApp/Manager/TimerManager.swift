@@ -30,7 +30,7 @@ class TimeManager {
         let dateFormater = DateFormatter()
         dateFormater.timeZone = TimeZone(abbreviation: "GMT+3")
         dateFormater.locale = Locale.current
-        dateFormater.dateFormat = "EEEE, d MMM, yyyy"
+        dateFormater.dateFormat = "EEEE, d MMM"
         let formattedString = dateFormater.string(from: date)
         return formattedString
     }
