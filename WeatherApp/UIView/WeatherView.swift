@@ -50,7 +50,8 @@ class WeatherView: UIView, CLLocationManagerDelegate {
             self.naminglabel()
             self.imageAssignment(imageName)
         }
-      
+
+        
     }
     
     func naminglabel() {

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="QWF-nw-Y7k" customClass="WeatherViewController" customModule="WeatherApp" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="YLe-WR-uPl" customClass="WeatherView" customModule="WeatherApp" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Epp-3Y-llC">
+                        <rect key="frame" x="0.0" y="79" width="430" height="34.333333333333343"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvR-Nz-gdW">
+                                <rect key="frame" x="0.0" y="0.0" width="54" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Menu"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cos-d0-Ypw">
+                                <rect key="frame" x="383" y="0.0" width="47" height="34.333333333333336"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Nf8-ZH-H4L">
+                        <rect key="frame" x="0.0" y="133.33333333333331" width="430" height="764.66666666666674"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-pj-fsf">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="18.666666666666668"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsg-9L-E55">
+                                        <rect key="frame" x="203.66666666666666" y="0.0" width="22.666666666666657" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJV-QE-Ij6">
+                                        <rect key="frame" x="209.33333333333334" y="0.0" width="11.333333333333343" height="18.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C1X-VQ-lXl">
+                                <rect key="frame" x="0.0" y="43.666666666666671" width="430" height="237.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-8p-R5O">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="237.66666666666666"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PZS-VB-HLK">
+                                <rect key="frame" x="0.0" y="306.33333333333337" width="430" height="254.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vih-JR-Z3P">
+                                        <rect key="frame" x="190" y="0.0" width="50" height="154.33333333333334"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRx-wp-CUT">
+                                        <rect key="frame" x="190" y="154.33333333333331" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-0Q-38s">
+                                        <rect key="frame" x="190" y="204.33333333333331" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-ib-M2d">
+                                <rect key="frame" x="0.0" y="585.66666666666663" width="430" height="179"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qon-gJ-KTb">
+                                        <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="179"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xhX-41-XWe">
+                                                <rect key="frame" x="46.666666666666657" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8uU-dO-fsA"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-Sx-GUh">
+                                                <rect key="frame" x="46.666666666666657" y="50" width="50" height="79"/>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWb-PK-EhZ">
+                                                <rect key="frame" x="46.666666666666657" y="129" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HnZ-bK-7na">
+                                        <rect key="frame" x="143.33333333333331" y="0.0" width="143.33333333333331" height="179"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-g3-GSX">
+                                                <rect key="frame" x="46.666666666666657" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="p3s-GL-11f"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozv-0k-zZo">
+                                                <rect key="frame" x="46.666666666666657" y="50" width="50" height="79"/>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeM-fS-fU7">
+                                                <rect key="frame" x="46.666666666666657" y="129" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f4h-78-h9i">
+                                        <rect key="frame" x="286.66666666666669" y="0.0" width="143.33333333333331" height="179"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wky-Vc-DET">
+                                                <rect key="frame" x="46.666666666666629" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="XZ0-XY-3kY"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9I-IE-Gkm">
+                                                <rect key="frame" x="46.666666666666629" y="50" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVh-GI-wTT">
+                                                <rect key="frame" x="46.666666666666629" y="100" width="50" height="79"/>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="KN6-bw-u2A"/>
+                <color key="backgroundColor" red="0.0058526163920760155" green="0.83707970380783081" blue="0.98787957429885864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Epp-3Y-llC" firstAttribute="leading" secondItem="KN6-bw-u2A" secondAttribute="leading" id="Hqn-XO-TUM"/>
+                    <constraint firstItem="Epp-3Y-llC" firstAttribute="trailing" secondItem="KN6-bw-u2A" secondAttribute="trailing" id="Jax-NT-iw9"/>
+                    <constraint firstItem="KN6-bw-u2A" firstAttribute="trailing" secondItem="Nf8-ZH-H4L" secondAttribute="trailing" id="MkC-oN-pkL"/>
+                    <constraint firstItem="Nf8-ZH-H4L" firstAttribute="leading" secondItem="KN6-bw-u2A" secondAttribute="leading" id="QgG-9r-xbH"/>
+                    <constraint firstItem="Nf8-ZH-H4L" firstAttribute="top" secondItem="Epp-3Y-llC" secondAttribute="bottom" constant="20" id="azb-dW-hRx"/>
+                    <constraint firstItem="Epp-3Y-llC" firstAttribute="top" secondItem="KN6-bw-u2A" secondAttribute="top" constant="20" id="jW6-Mx-MpM"/>
+                    <constraint firstItem="KN6-bw-u2A" firstAttribute="bottom" secondItem="Nf8-ZH-H4L" secondAttribute="bottom" id="qgW-SY-eBd"/>
+                </constraints>
+                <connections>
+                    <outlet property="aboutWeather" destination="3qe-0Q-38s" id="NOB-mG-dbZ"/>
+                    <outlet property="appearentTemperatureLabel" destination="cRx-wp-CUT" id="r78-h5-Y2T"/>
+                    <outlet property="currentDate" destination="qJV-QE-Ij6" id="Qhz-Tr-85F"/>
+                    <outlet property="imageView" destination="1yV-8p-R5O" id="b7x-e2-XC6"/>
+                    <outlet property="locationLabel" destination="Nsg-9L-E55" id="rKe-jQ-d10"/>
+                    <outlet property="pressure" destination="ozv-0k-zZo" id="kIh-69-ZFK"/>
+                    <outlet property="pressureImge" destination="ADE-g3-GSX" id="SzG-bC-BaO"/>
+                    <outlet property="pressureLabel" destination="FeM-fS-fU7" id="sVa-OO-Rp6"/>
+                    <outlet property="sunrise" destination="gYc-Sx-GUh" id="OWa-Qv-AZ9"/>
+                    <outlet property="sunriseImage" destination="xhX-41-XWe" id="n99-gG-QZe"/>
+                    <outlet property="sunriseLabel" destination="fWb-PK-EhZ" id="Qpd-3X-b6F"/>
+                    <outlet property="sunset" destination="A9I-IE-Gkm" id="xWO-Au-igc"/>
+                    <outlet property="sunsetImage" destination="wky-Vc-DET" id="oLI-4q-WAb"/>
+                    <outlet property="sunsetLabel" destination="AVh-GI-wTT" id="ixa-Bb-PKu"/>
+                    <outlet property="temperatureLabel" destination="vih-JR-Z3P" id="dTh-ML-xUn"/>
+                </connections>
+            </view>
+            <point key="canvasLocation" x="1038.1395348837209" y="-713.30472103004297"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="Menu" width="30" height="30"/>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+    </resources>
+</document>

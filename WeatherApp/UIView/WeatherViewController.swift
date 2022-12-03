@@ -8,18 +8,32 @@
 import UIKit
 
 
-class WeatherViewController: UIViewController{
+protocol WeatherViewControllerDelegate {
+     func toogleMenu()
+}
+
+class WeatherViewController: UIViewController {
+    var delegate: WeatherViewControllerDelegate?
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
+ 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
     }
     
-    @IBAction func refreshButtonTapped(_ sender: Any){
+    @IBAction func refreshTapped(_ sender: Any) {
         if let weatherView = view as? WeatherView {
             weatherView.updateUI()
         }
+
     }
+    
+    @IBAction func menuTapped(_ sender: UIButton) {
+        print(1)
+        delegate?.toogleMenu()
+    }
+    
+    
 }
