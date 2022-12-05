@@ -16,12 +16,22 @@ extension MenuViewController: UITableViewDataSource {
         return city.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        var configuration = cell.defaultContentConfiguration()
-        configuration.text = city[indexPath.row]
-        cell.contentConfiguration = configuration
-        // возвращаем сконфигурированный экземпляр ячейки
+        var cell: CityTableViewCell
+        if let reuseCell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell") as? CityTableViewCell {
+            cell = reuseCell
+        } else {
+            cell = CityTableViewCell()
+        }
+        return configure(cell: cell, for: indexPath)
+    }
+    
+    
+    private func configure(cell: CityTableViewCell, for indexPath: IndexPath) -> UITableViewCell {
+
+        cell.cityName?.text = city[indexPath.row]
+        print(city[indexPath.row])
         return cell
     }
 }
@@ -29,12 +39,13 @@ extension MenuViewController: UITableViewDataSource {
 
 
 class MenuViewController: UIViewController {
-    let city: [String] = ["lida", "Minsk", "Vitebsk", "Brest", "Gomel", "Mogilev"]
+    var cell: CityTableViewCell!
+    @IBOutlet weak var tableView: UITableView!
+    var city: [String] = ["Текущая геопозиция", "Lida", "Minsk"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.layer.backgroundColor = UIColor.clear.cgColor
+        tableView.register(UINib(nibName: "CityTableViewCell", bundle: nil), forCellReuseIdentifier: "CityTableViewCell")
     }
-
-
 
 }

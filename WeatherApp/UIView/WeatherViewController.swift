@@ -31,7 +31,6 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func menuTapped(_ sender: UIButton) {
-        print(1)
         delegate?.toogleMenu()
     }
     

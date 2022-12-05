@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityTableViewCell" rowHeight="47" id="KGk-i7-Jjw" customClass="CityTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="125" height="47"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHa-mx-v3L">
+                        <rect key="frame" x="10" y="10" width="105" height="28"/>
+                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqv-ps-tNA">
+                        <rect key="frame" x="0.0" y="40" width="125" height="7"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qqv-ps-tNA" secondAttribute="bottom" id="2cf-jb-Spe"/>
+                    <constraint firstAttribute="trailing" secondItem="xHa-mx-v3L" secondAttribute="trailing" constant="10" id="NIF-6i-n8C"/>
+                    <constraint firstAttribute="trailing" secondItem="qqv-ps-tNA" secondAttribute="trailing" id="QfL-UV-0dw"/>
+                    <constraint firstItem="qqv-ps-tNA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UqT-xp-OpP"/>
+                    <constraint firstItem="xHa-mx-v3L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="isf-kk-i1A"/>
+                    <constraint firstItem="qqv-ps-tNA" firstAttribute="top" secondItem="xHa-mx-v3L" secondAttribute="bottom" constant="2" id="nui-rU-fqb"/>
+                    <constraint firstItem="xHa-mx-v3L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="yVu-DZ-YQN"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                        <integer key="value" value="10"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityName" destination="xHa-mx-v3L" id="bt9-d8-iI8"/>
+                <outlet property="contentView" destination="H2p-sc-9uM" id="dwC-qE-eBJ"/>
+            </connections>
+            <point key="canvasLocation" x="119.84732824427481" y="18.661971830985916"/>
+        </tableViewCell>
+    </objects>
+</document>
