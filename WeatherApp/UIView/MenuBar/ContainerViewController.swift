@@ -30,7 +30,10 @@ class ContainerViewController: UIViewController, WeatherViewControllerDelegate {
             menuViewController = MenuViewController.instantiate()
             view.insertSubview(menuViewController.view, at: 0)
             addChild(menuViewController)
-            print("123")
+            if let weatherView = view as? WeatherView {
+                print("Menu")
+                weatherView.updateUI()
+            }
         }
     }
     
@@ -59,7 +62,7 @@ class ContainerViewController: UIViewController, WeatherViewControllerDelegate {
     
     //MARK: Menu
     func toogleMenu() {
-         configureMenuViewController()
+        configureMenuViewController()
         isMove = !isMove
         showWeatherViewController(shouldMove: isMove)
     }

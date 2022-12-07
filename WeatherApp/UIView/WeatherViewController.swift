@@ -22,8 +22,9 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+  
     
-    @IBAction func refreshTapped(_ sender: Any) {
+    @IBAction func refreshTapped(_ sender: UIButton) {
         if let weatherView = view as? WeatherView {
             weatherView.updateUI()
         }

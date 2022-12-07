@@ -16,37 +16,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="430" height="852"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g23-5I-mZ0">
-                        <rect key="frame" x="20" y="105" width="250" height="747"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="JLa-Pn-Mlg" id="cgq-0x-hIW"/>
-                            <outlet property="delegate" destination="JLa-Pn-Mlg" id="bUS-42-5w5"/>
-                        </connections>
-                    </tableView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-AM-oe5">
-                        <rect key="frame" x="0.0" y="50" width="290" height="35"/>
-                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="25"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-AM-oe5">
+                        <rect key="frame" x="0.0" y="50" width="290" height="42"/>
+                        <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="30"/>
                         <color key="textColor" red="0.93014970019999998" green="0.95893807720000002" blue="0.9706529975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-Ha-Dfr">
+                        <rect key="frame" x="10" y="112" width="260" height="706"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NQB-0K-HU8">
+                            <size key="itemSize" width="250" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="JLa-Pn-Mlg" id="5uv-O5-Ybo"/>
+                            <outlet property="delegate" destination="JLa-Pn-Mlg" id="Ovo-0P-5jA"/>
+                        </connections>
+                    </collectionView>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="tDd-dv-24a"/>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="g23-5I-mZ0" secondAttribute="bottom" id="JX0-Ur-xU8"/>
-                    <constraint firstItem="g23-5I-mZ0" firstAttribute="leading" secondItem="tDd-dv-24a" secondAttribute="leading" constant="20" id="KZq-VA-JX3"/>
-                    <constraint firstItem="tDd-dv-24a" firstAttribute="trailing" secondItem="g23-5I-mZ0" secondAttribute="trailing" constant="160" id="N3a-ov-mGT"/>
+                    <constraint firstItem="tDd-dv-24a" firstAttribute="bottom" secondItem="sLF-Ha-Dfr" secondAttribute="bottom" id="HMP-8M-D1k"/>
+                    <constraint firstItem="tDd-dv-24a" firstAttribute="trailing" secondItem="sLF-Ha-Dfr" secondAttribute="trailing" constant="160" id="MvQ-Pp-mB2"/>
                     <constraint firstItem="hhs-AM-oe5" firstAttribute="leading" secondItem="tDd-dv-24a" secondAttribute="leading" id="O3e-fl-PtP"/>
-                    <constraint firstItem="g23-5I-mZ0" firstAttribute="top" secondItem="hhs-AM-oe5" secondAttribute="bottom" constant="20" id="RSg-6f-d1C"/>
+                    <constraint firstItem="sLF-Ha-Dfr" firstAttribute="top" secondItem="hhs-AM-oe5" secondAttribute="bottom" constant="20" id="ZRp-cK-Atl"/>
                     <constraint firstItem="hhs-AM-oe5" firstAttribute="top" secondItem="Pbz-e0-aer" secondAttribute="top" constant="50" id="frt-ID-Y2L"/>
+                    <constraint firstItem="sLF-Ha-Dfr" firstAttribute="leading" secondItem="tDd-dv-24a" secondAttribute="leading" constant="10" id="mzO-P5-QUq"/>
                     <constraint firstAttribute="trailing" secondItem="hhs-AM-oe5" secondAttribute="trailing" constant="140" id="vpa-ZR-Dqr"/>
                 </constraints>
             </view>
             <size key="freeformSize" width="430" height="852"/>
             <connections>
-                <outlet property="tableView" destination="g23-5I-mZ0" id="vPX-oh-Qmw"/>
+                <outlet property="collectionView" destination="sLF-Ha-Dfr" id="Far-dX-XPD"/>
             </connections>
             <point key="canvasLocation" x="-16.793893129770993" y="-159.1549295774648"/>
         </viewController>
