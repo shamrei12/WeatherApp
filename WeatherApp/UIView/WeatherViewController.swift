@@ -32,6 +32,9 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func menuTapped(_ sender: UIButton) {
+        if let weatherView = view as? WeatherView {
+            weatherView.updateUI()
+        }
         delegate?.toogleMenu()
     }
     

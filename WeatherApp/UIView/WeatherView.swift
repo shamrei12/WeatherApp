@@ -35,8 +35,6 @@ class WeatherView: UIView, CLLocationManagerDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        defaults.set("53,88993", forKey: keyLatitude)
-        defaults.set("25,29817", forKey: keylongitude)
         updateUI()
     }
     
